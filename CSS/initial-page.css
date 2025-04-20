@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    height: 100vh;
+    a{
+        text-decoration: none;
+    }
+
+    h1{
+        margin: 0px;
+    }
+}
+
+/*Tela inicial*/
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: rgb(93, 93, 209);
+    height: 8%;
+    width: 100%;
+    color: white;
+
+    a {
+        margin-right: 20px;
+        margin-top: 20px;
+        color: white;
+    }
+
+    h1{
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 84%;
+    background-color: white;
+    
+    p {
+        text-align: justify;
+        width: 65%;
+        color: rgb(93, 93, 209);
+        font-size: 20px;
+    }
+
+    h1 {
+        color: rgb(255, 171, 60);
+        font-size: 40px;
+    }
+
+}
+
+.text {
+    text-align: justify;
+    width: 65%;
+    color: white;
+}
+
+.footer {
+    height: 8%;
+    background-color: rgb(93, 93, 209);
+}
+
+/*Pagina de Login*/
