@@ -1,0 +1,86 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #ffb400;
+}
+
+header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Dashboard (container de cards) */
+#dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Card de painel */
+.painel-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.painel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.painel-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.status {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.status.ativo {
+  color: green;
+}
+
+.status.inativo {
+  color: gray;
+}
+
+.status.falha {
+  color: red;
+}
+
+.geracao {
+  font-weight: bold;
+  color: #0077cc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.8rem;
+  color: #999;
+}
