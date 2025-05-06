@@ -9,18 +9,18 @@
 
 <body>
     <div class="header">
-        <h1>SunFlow</h1>
-        <a href="index.html">Pagina Inicial</a>
+        <a href="/HTML/index.html" ><img src="/img/logo-invisivel.png" height="72px"></a>
+        <a href="index.html" id="login">Pagina Inicial</a>
     </div>
 
     <div class="login">
         <div class="divLogin">
-            <h1>Login SunFlow</h1>
-            <h2>Email: </h2>
-            <input type="email" name="email" id="email">
-            <h2>Senha:</h2>
+            <h2>Login SunFlow</h2>
+            <h3>Usuario </h3>
+            <input type="text" name="text" id="usuario">
+            <h3>Senha</h3>
             <input type="password" name="senha" id="senha">
-            <button>LOGIN</button>
+            <button onclick="login(event)"><b>LOGIN</b></button>
 
         </div>
         <a href="inicial-paineis.html">Login sem conta</a>
@@ -32,4 +32,23 @@
     </div>
     
 </body>
+<script>
+    function login(event){
+        event.preventDefault();
+
+        let usuario = document.getElementById('usuario').value
+        let senha = document.getElementById('senha').value
+
+        if(usuario === 'admin' && senha === '12345'){
+            window.alert('Login Efetuado')
+            document.getElementById('usuario').textContent = ''
+            document.getElementById('senha').textContent = ''
+            window.location.href = 'inicial-paineis.html'
+        } else {
+            window.alert('Email ou senha incorretos')
+            document.getElementById('usuario').textContent = ''
+            document.getElementById('senha').textContent = ''
+        }
+    }
+</script>
 </html>

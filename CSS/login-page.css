@@ -1,4 +1,9 @@
 body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(/img/fundo-login.jpg);
+    background-attachment: fixed ;
+    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
     height: 100vh;
@@ -16,16 +21,23 @@ body {
     flex-direction: row;
     justify-content: space-between;
 
-    background-color: rgb(93, 93, 209);
+    background-color: rgb(39, 39, 78);
     height: 8%;
     width: 100%;
     color: white;
 
     a {
         margin-right: 20px;
+        margin-top: 0px;
+        color: white;
+    }
+
+    #login {
+        margin-right:20px;
         margin-top: 20px;
         color: white;
     }
+
 
     h1{
         margin-left: 20px;
@@ -38,10 +50,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px white solid;
 
     
-    background-color: white;
     height: 84%;
 
     h1 {
@@ -61,21 +71,46 @@ body {
 .divLogin {
     display: flex;
     flex-direction: column;
-
+    justify-content: space-around;
+    
     border: 2px rgb(255, 171, 60) solid;
-    background-color: rgb(93, 93, 209);
+    background-color: rgb(39, 39, 78);
     border-radius: 10px;
     width: 27%;
-    height: 46%;
+    height: 39%;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+
+    h3 {
+        margin: 0px;
+        margin-left: 15px;
+        color: rgb(255, 171, 60);
+    }
+
+    h2 {
+        margin: 0px;
+        align-self: center;
+    }
+
+    input {
+        align-self: center;
+        margin: 0px;
+        border: 2px solid rgb(255, 171, 60);
+        color: white;
+        border-radius: 5px;
+        height: 27px;
+        width: 90%;
+        background-color: rgb(62, 62, 81);
+    }
 
     button {
         align-self: center;
-        margin-top: 20px;
+        margin-bottom: 10px;
 
         width: 20%;
+        height: 28px;
         background-color: rgb(255, 171, 60);
-        color: white;
+        border-radius: 5px;
+        color: rgb(62, 62, 81);
         border: none;
 
     }
@@ -84,5 +119,5 @@ body {
 
 .footer {
     height: 8%;
-    background-color: rgb(93, 93, 209);
+    background-color: rgb(39, 39, 78);
 }
