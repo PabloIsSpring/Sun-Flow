@@ -21,12 +21,17 @@ async function carregarPaineis() {
       const canvasId = `grafico-${painel.id}`;
 
       card.innerHTML = `
-        <h2>${painel.nome}</h2>
+        <h4>${painel.nome}</h4>
         <p class="status ${painel.status}">Status: ${painel.status}</p>
         <p class="geracao">Média do dia: ${media} W</p>
-        <canvas id="${canvasId}" height="99"></canvas>
+        <canvas id="${canvasId}" ></canvas>
         <a href="painel.html?id=${painel.id}">Ver detalhes →</a>
       `;
+
+      card.style.border = '3px rgb(39, 39, 78) solid'
+      card.style.padding = '50px'
+      card.style.borderRadius = '10px'
+      card.style.margin = '20px'
 
       painelContainer.appendChild(card);
 
@@ -35,7 +40,7 @@ async function carregarPaineis() {
         if (horasColetadas > 0) {
           const ctx = document.getElementById(canvasId).getContext('2d');
           new Chart(ctx, {
-            type: 'line',
+            type: 'bar',
             data: {
               labels: historicoDia.map((_, i) => `${i + 6}:00`),
               datasets: [{

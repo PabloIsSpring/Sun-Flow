@@ -22,6 +22,31 @@
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='orange' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
     }
 
+    #geracao-geral {
+        border: 3px rgb(39, 39, 78) solid;
+        padding: 50px;
+        border-radius: 10px;
+    }
+
+    #painel-container {  
+        border-radius: 10px;
+
+    }
+
+    #infos-gerais {
+        margin-top: 60px;
+        h3 {
+            margin: 20px 
+        }
+    }
+
+    #paineis {
+        margin-top: 60px; 
+        h3 {
+            margin: 20px 
+        }
+    }
+
 </style>
 
 <body>
@@ -60,18 +85,21 @@
     </nav>
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-7">
-                <div style="overflow-x: auto; width: 100%; min-width: 800px;"></div>
-                    <div id="painel-container" style="margin-top: 55px;">
+        <div class="row d-flex flex-row justify-content-around">
+            <div id="paineis" class="col-7">
+                <h3>Visão Geral da Produção das Placas</h3>
+                <div id="painel-container">
 
-                    </div>
                 </div>
             </div>
-            <div class="col-5">
-                <div id="painel-gastos">
+            <div id="infos-gerais" class="col-5 d-flex flex-column align-items-center">
+                <h3>Informações Gerais</h3>
+                <canvas id="geracao-geral" height="45">
 
-                </div>
+                </canvas>
+                <canvas id="gasto">
+
+                </canvas>
             </div>
         </div>
     </div>
@@ -81,5 +109,62 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../SCRIPT/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    async function geradorGastoGeral() {
+        let dadosJSON = await fetch("../data/paineis.json");
+        let dadosOBJ = await dadosJSON.json();
+
+        let ctxGasto = document.getElementById('geracao-geral').getContext('2d');
+
+        new Chart (ctxGasto, {
+            type: 'pie',
+            data: {
+                labels: ['Painel Alpha', 'Painel Beta', 'Painel Omega'],
+                datasets: [{
+                    label: 'Geracao total do mês',
+                    data: [
+                        dadosOBJ[0].historico.ano[3],
+                        dadosOBJ[1].historico.ano[3], 
+                        dadosOBJ[2].historico.ano[3]
+                    ],
+                    backgroundColor: [
+                        'rgb(250, 219, 84, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgb(39, 39, 78)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right'
+                    }
+                },
+                title: {
+                    display: 'true',
+                    text: 'Geração total dos painéis'
+                }
+            }
+        });
+    }
+
+    async function consumo() {
+        let dadosJSON = await fetch("../data/paineis.json");
+        let dadosOBJ = await dadosJSON.json();
+
+        let ctxGasto = document.getElementById('geracao-geral').getContext('2d');
+    }
+
+    function calculoGeracaoTotal(){
+
+    }
+
+
+    geradorGastoGeral();
+</script>
 
 </html>
