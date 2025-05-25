@@ -24,7 +24,7 @@ async function carregarPaineis() {
         <h2>${painel.nome}</h2>
         <p class="status ${painel.status}">Status: ${painel.status}</p>
         <p class="geracao">Média do dia: ${media} W</p>
-        <canvas id="${canvasId}" height="100"></canvas>
+        <canvas id="${canvasId}" height="99"></canvas>
         <a href="painel.html?id=${painel.id}">Ver detalhes →</a>
       `;
 
@@ -37,9 +37,9 @@ async function carregarPaineis() {
           new Chart(ctx, {
             type: 'line',
             data: {
-              labels: historicoDia.map((_, i) => `${i + 1}h`),
+              labels: historicoDia.map((_, i) => `${i + 6}:00`),
               datasets: [{
-                label: 'Geração (W)',
+                label: 'Geração (KWh)',
                 data: historicoDia,
                 borderColor: 'rgba(255, 165, 0, 0.9)',
                 backgroundColor: 'rgba(255, 165, 0, 0.2)',
@@ -75,6 +75,12 @@ async function carregarPaineis() {
     console.error('Erro ao carregar painéis:', erro);
     painelContainer.innerHTML = '<p>Erro ao carregar dados.</p>';
   }
+}
+
+const painelGastos = document.getElementById('#painel-gastos');
+
+async function carregarGastos() {
+  
 }
 
 carregarPaineis();

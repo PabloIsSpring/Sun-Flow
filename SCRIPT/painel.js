@@ -42,7 +42,7 @@ function exibirPainel(painel) {
   // Gráficos para o painel
   criarGrafico('grafico-dia', painel.historico.dia, 'Geração (W) por hora', 'hora');
   criarGrafico('grafico-semana', painel.historico.semana, 'Geração (W) por dia da semana', 'dia');
-  criarGrafico('grafico-mes', painel.historico.mes, 'Geração (W) por semana do mês', 'semana');
+  criarGrafico('grafico-mes', painel.historico.mes, 'Geração (KWh) por semana do mês', 'semana');
   criarGrafico('grafico-ano', painel.historico.ano, 'Geração (W) por mês', 'mês');
 }
 
@@ -54,13 +54,13 @@ function criarGrafico(id, dados, label, tipo) {
   let labels;
   switch (tipo) {
     case 'hora':
-      labels = dados.map((_, i) => `${i + 1}h`);
+      labels = dados.map((_, i) => `${i + 6}:00`);
       break;
     case 'dia':
       labels = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
       break;
     case 'semana':
-      labels = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5'];
+      labels = ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'];
       break;
     case 'mês':
       labels = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];

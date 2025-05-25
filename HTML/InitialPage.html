@@ -1,28 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <link rel="stylesheet" href="/CSS/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css">
+
     <title>SunFlow</title>
 </head>
+<style>
+    .minha-cor {
+        background-color: rgb(39, 39, 78);
+    }
+
+    .minha-cor-texto {
+        color: rgb(250, 219, 84);
+        border-color: rgb(250, 219, 84);
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='orange' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
+    }
+
+</style>
 
 <body>
+    <nav class="navbar fixed-top minha-cor">
+        <div class="container-fluid minha-cor">
+            <a class="navbar-brand minha-cor-texto" href="#">🌞 <b>SunFlow</b></a>
+            <button class="navbar-toggler minha-cor-texto" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Configurações</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Perfil</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Contato
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">E-MAIL: suporte@sunflow.br</a></li>
+                                <li><a class="dropdown-item" href="#">TELEFONE: +55 15 99604-2744</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <div class="header">
-        <h1>Sunflow</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-7">
+                <div style="overflow-x: auto; width: 100%; min-width: 800px;"></div>
+                    <div id="painel-container" style="margin-top: 55px;">
 
-        <div class="menu-user">
-            <a href="#">👤 Perfil</a>
-            
-            <div class="dropdown">
-                <a href="#">Meu Perfil</a>
-                <a href="#">Configurações</a>
-                <a href="#">Plano</a>
-                <a href="#">Sair</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5">
+                <div id="painel-gastos">
+
+                </div>
             </div>
         </div>
     </div>
-    
+
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../SCRIPT/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </html>
