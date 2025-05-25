@@ -9,6 +9,18 @@
     <title>SunFlow</title>
 </head>
 <style>
+    body {
+        background-color: rgb(211, 211, 211);
+    }
+
+    h3 {
+        color: rgb(39, 39, 78);
+    }
+
+    h4 {
+        color: rgb(39, 39, 78)
+    }
+
     .minha-cor {
         background-color: rgb(39, 39, 78);
     }
@@ -23,8 +35,10 @@
     }
 
     #geracao-geral {
+        background-color: rgb(240, 240, 240);
         border: 3px rgb(39, 39, 78) solid;
         padding: 50px;
+        width: 100px;
         border-radius: 10px;
     }
 
@@ -34,7 +48,9 @@
     }
 
     #infos-gerais {
+
         margin-top: 60px;
+
         h3 {
             margin: 20px 
         }
@@ -47,12 +63,16 @@
         }
     }
 
+    .navbar-brand:hover {
+        color: orange;
+    }
+
 </style>
 
 <body>
     <nav class="navbar fixed-top minha-cor">
         <div class="container-fluid minha-cor">
-            <a class="navbar-brand minha-cor-texto" href="#">🌞 <b>SunFlow</b></a>
+            <a class="navbar-brand minha-cor-texto" href="#" style="font-size: 25px;">🌞 <b>SunFlow</b></a>
             <button class="navbar-toggler minha-cor-texto" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -85,16 +105,16 @@
     </nav>
 
     <div class="container-fluid">
-        <div class="row d-flex flex-row justify-content-around">
-            <div id="paineis" class="col-7">
+        <div class="row d-flex flex-column flex-sm-row justify-content-around">
+            <div id="paineis" class="col-12 col-md-7">
                 <h3>Visão Geral da Produção das Placas</h3>
                 <div id="painel-container">
 
                 </div>
             </div>
-            <div id="infos-gerais" class="col-5 d-flex flex-column align-items-center">
+            <div id="infos-gerais" class="col-11 col-sm-5 d-flex flex-column align-self-center align-items-center">
                 <h3>Informações Gerais</h3>
-                <canvas id="geracao-geral" height="45">
+                <canvas id="geracao-geral"> 
 
                 </canvas>
                 <canvas id="gasto">
@@ -129,7 +149,9 @@
                         dadosOBJ[2].historico.ano[3]
                     ],
                     backgroundColor: [
-                        'rgb(250, 219, 84, 0.7)'
+                        'rgb(250, 219, 34, 0.3)',
+                        'rgb(250, 219, 84, 0.7)',
+                        'rgb(250, 243, 21, 0.7)'
                     ],
                     borderColor: [
                         'rgb(39, 39, 78)'
@@ -141,13 +163,20 @@
                 responsive: true,
                 plugins: {
                     legend: {
-                        position: 'right'
+                        position: 'right',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Geração Total dos Painéis',
+                        font: {
+                            size: 29,
+                            weight: 'normal'
+                        },
+                        color: 'rgb(39, 39, 78)',
+                        position: 'top',
+                        align: 'start'
                     }
                 },
-                title: {
-                    display: 'true',
-                    text: 'Geração total dos painéis'
-                }
             }
         });
     }

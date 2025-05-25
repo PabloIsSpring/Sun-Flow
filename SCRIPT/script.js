@@ -32,6 +32,7 @@ async function carregarPaineis() {
       card.style.padding = '50px'
       card.style.borderRadius = '10px'
       card.style.margin = '20px'
+      card.style.backgroundColor = 'rgb(240, 240, 240)'
 
       painelContainer.appendChild(card);
 
