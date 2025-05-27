@@ -1,0 +1,64 @@
+    body {
+        background-color: rgb(211, 211, 211);
+    }
+
+    h3 {
+        color: rgb(39, 39, 78);
+    }
+
+    h4 {
+        color: rgb(39, 39, 78)
+    }
+
+    .minha-cor {
+        background-color: rgb(39, 39, 78);
+    }
+
+    .minha-cor-texto {
+        color: rgb(250, 219, 84);
+        border-color: rgb(250, 219, 84);
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='orange' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
+    }
+
+    #geracao-geral {
+        background-color: rgb(240, 240, 240);
+        border: 3px rgb(39, 39, 78) solid;
+        padding: 50px;
+        border-radius: 10px;
+    }
+
+    #painel-container {
+        border-radius: 10px;
+
+    }
+
+    #infos-gerais {
+        margin-top: 60px;;
+
+        h3 {
+            margin: 20px
+        }
+    }
+
+    #paineis {
+        margin-top: 60px;
+
+        h3 {
+            margin: 20px
+        }
+    }
+
+    .navbar-brand:hover {
+        color: orange;
+    }
+
+    #gasto {
+        background-color: rgb(240, 240, 240);
+        border: 3px rgb(39, 39, 78) solid;
+        padding: 50px;
+        border-radius: 10px;
+        margin-top: 16px;
+    }

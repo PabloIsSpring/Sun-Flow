@@ -1,18 +1,22 @@
 [
     {
-        "residencia_id": "casa-1",
+        "residencia_id": "casa-01",
         "historico_energia": [
             {
                 "data": "2025-01-20",
-                "consumo_kwh": 32.1
+                "consumo_kwh": 187.1
             },
             {
                 "data": "2025-02-20",
-                "consumo_kwh": 30.8
+                "consumo_kwh": 186.8
             },
             {
                 "data": "2025-03-20",
-                "consumo_kwh": 35.7
+                "consumo_kwh": 176.7
+            },
+            {
+                "data": "2025-04-20",
+                "consumo_kwh": 140.2
             }
         ]
     }
