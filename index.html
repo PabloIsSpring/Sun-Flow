@@ -1,49 +1,504 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
-    <link rel="stylesheet" href="../CSS/initial-page.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SunFlow</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Sunflow: Monitoramento de Placas Solares</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="img/icone.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
 </head>
 
-<body>
+<body class="index-page">
 
-    <div class="header">
-        <a href="../HTML/index.html"><img src="../img/logo-invisivel.png" height="72px"></a>
-        <a href="../HTML/loginPage.html" id="login">Login</a>
-    </div>
-    <div class="content">
-        <h1>QUEM SOMOS?</h1>
-        <p class="p1">Na SunFlow, acreditamos que a energia solar deve ser acessível, eficiente e transparente. Nosso site foi criado para ajudar os proprietários de painéis solares a monitorar sua geração de energia de forma simples e intuitiva.</p>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
 
-        <p class="p1">Com gráficos claros e precisos, você pode visualizar a produção de energia dos seus painéis em tempo real. E se houver alguma queda no desempenho, nosso sistema inteligente identifica possíveis problemas, como sujeira ou cobertura de nuvens, para que você possa agir rapidamente e manter sua eficiência energética.</p>
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="img/logo_sem_fundo_com_nome.png" alt=""> -->
+                <h1 class="sitename">Sunflow</h1>
+            </a>
 
-        <p class="p1">Nossa missão é tornar a energia solar mais acessível e ajudar você a aproveitar ao máximo seu investimento sustentável.</p>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#about">Sobre Nós</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> -->
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
 
-        <p class='p1'>SunFlow: a tecnologia que ilumina seu caminho para um futuro mais verde.</p>
-    </div>
-    <div class="content">
-        <h1>NOSSOS SERVIÇOS</h1>
-        <div class="servicos">
-            <div class="servico">
-                <img src="../img/panel-icon.png" alt="Icone de Painel" height="60px">
-                <p>Monitoramento da geração de energia dos seus paíneis solares.</p>
+            <a class="cta-btn" href="../HTML/loginPage.html">Acesso</a>
+
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero section dark-background">
+
+            <img src="img/fundo-index.jpg" alt="" data-aos="fade-in">
+
+            <div class="container d-flex flex-column align-items-center text-center">
+                <h2 data-aos="fade-up" data-aos-delay="100">Seu Sistema Solar Sob Controle</h2>
+                <p data-aos="fade-up" data-aos-delay="200">Soluções avançadas de monitoramento para garantir o máximo
+                    rendimento
+                    da sua energia solar.</p>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+                </div>
             </div>
-            <div class="servico">
-                <img src="../img/energy-icon.png" alt="Economia de Energia">
-                <p>Monitorar os seus gastos de energia gerada.</p>
+
+        </section><!-- /Hero Section -->
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Sobre</h2>
+                <p>Monitoramento inteligente de energia solar para um futuro mais limpo e eficiente</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+                        <p>
+                            Somos uma empresa especializada em soluções tecnológicas para o setor de energia solar.
+                            Nossa aplicação web permite o monitoramento em tempo real de painéis solares, ajudando
+                            nossos clientes a maximizar a eficiência energética e reduzir custos.
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check2-circle"></i> <span>Monitoramento completo e em tempo real de
+                                    sistemas fotovoltaicos</span></li>
+                            <li><i class="bi bi-check2-circle"></i> <span>Previsões de uso e geração.</span></li>
+                            <li><i class="bi bi-check2-circle"></i> <span>Consultoria para otimização energética e
+                                    manutenção preventiva</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <p>Nosso compromisso é com a sustentabilidade, a inovação e a eficiência. Ajudamos residências,
+                            empresas e fazendas solares a monitorar e melhorar continuamente o desempenho de seus
+                            sistemas solares. Com nossa plataforma, o futuro da energia é mais transparente, eficiente e
+                            acessível.</p>
+
+                    </div>
+
+                </div>
+
             </div>
-            <div class="servico">
-                <img src="../img/maintance-icon.png" alt="Chaves de Fenda e Boca">
-                <p>Manutenção e limpeza das suas placas solares.</p>
+
+        </section><!-- /About Section -->
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Serviços</h2>
+                <p>Conheça os recursos inteligentes que tornam o monitoramento e a gestão da sua energia solar mais
+                    simples e
+                    eficiente.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-item  position-relative">
+                            <div class="icon">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+                            <a class="stretched-link">
+                                <h3>Monitoramento de Energia</h3>
+                            </a>
+                            <p>Acompanhe em tempo real a geração de energia dos seus painéis solares com precisão,
+                                segurança e total
+                                controle sobre o desempenho dos seus painéis.</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-lightning-charge"></i>
+                            </div>
+                            <a class="stretched-link">
+                                <h3>Analise de Gastos</h3>
+                            </a>
+                            <p>Tenha total controle e visibilidade sobre os seus gastos de energia, com informações
+                                detalhadas para
+                                otimizar o consumo e aumentar a eficiência através da energia renovável.</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-tools"></i>
+                            </div>
+                            <a class="stretched-link">
+                                <h3>Manutenção e Limpeza</h3>
+                            </a>
+                            <p>Garanta o desempenho ideal dos seus painéis sabendo qual o tempo ideal para realizar a
+                                manutenção e
+                                limpeza dos seus painéis, aumentando a vida útil e a eficiência energética.</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-item position-relative">
+                            <div class="icon">
+                                <i class="bi bi-calendar3"></i>
+                            </div>
+                            <a class="stretched-link">
+                                <h3>Previsões</h3>
+                            </a>
+                            <p>Conte com previsões inteligentes sobre seus gastos e geração de energia para os próximos
+                                meses,
+                                utilizando modelos avançados de machine learning que ajudam você a planejar com mais
+                                eficiência.</p>
+                            <a class="stretched-link"></a>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Services Section -->
+
+        <!-- Call To Action Section -->
+        <section id="call-to-action" class="call-to-action section dark-background">
+
+            <img src="assets/img/cta-bg.jpg" alt="">
+
+            <div class="container">
+
+                <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-xl-9 text-center text-xl-start">
+                        <h3>Ainda não está convencido?</h3>
+                        <p>Nosso sistema vai além do básico: com monitoramento em tempo real e previsões automatizadas,
+                            você tem
+                            controle total sobre sua energia solar de forma simples, eficiente e inovadora. Confira
+                            algumas das
+                            tecnologias que utilizamos!</p>
+                    </div>
+                    <div class="col-xl-3 cta-btn-container text-center">
+                        <a class="cta-btn align-middle" href="#contact">Realize um orçamento.</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- /Call To Action Section -->
+
+        <!-- Features Section -->
+        <section id="features" class="features section">
+
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="features-image col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="100"><img
+                            src="assets/img/features-bg.jpg" alt=""></div>
+
+                    <div class="col-lg-6 order-lg-1">
+
+                        <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up"
+                            data-aos-delay="200">
+                            <i class="bi bi-filetype-js"></i>
+                            <div>
+                                <h4>Javascript</h4>
+                                <p>Utilizamos JavaScript moderno para criar interfaces interativas, responsivas e
+                                    altamente dinâmicas,
+                                    garantindo uma experiência fluida e eficiente para o usuário.</p>
+                            </div>
+                        </div><!-- End Features Item-->
+
+                        <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="300">
+                            <i class="bi bi-clipboard-data"></i>
+                            <div>
+                                <h4>Chart.js</h4>
+                                <p>Transformamos dados em visualizações claras e impactantes com Chart.js, permitindo
+                                    uma análise visual
+                                    precisa da geração e consumo de energia solar.</p>
+                            </div>
+                        </div><!-- End Features Item-->
+
+                        <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="400">
+                            <i class="bi bi-bootstrap-fill"></i>
+                            <div>
+                                <h4>Boostrap</h4>
+                                <p>Com Bootstrap, oferecemos um design responsivo, elegante e acessível em qualquer
+                                    dispositivo,
+                                    garantindo praticidade e performance sem abrir mão da estética.</p>
+                            </div>
+                        </div><!-- End Features Item-->
+
+                        <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="400">
+                            <i class="bi bi-filetype-py"></i>
+                            <div>
+                                <h4>Python</h4>
+                                <p>
+                                <p>Utilizamos Python para desenvolver algoritmos inteligentes de previsão, automação de
+                                    análises e processamento de dados energéticos, tornando seu sistema solar mais
+                                    eficiente e inteligente.</p>
+                            </div>
+                        </div><!-- End Features Item-->
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- /Features Section -->
+
+        <!-- Faq Section -->
+        <section id="faq" class="faq section">
+
+            <div class="container-fluid">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
+
+                        <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+                            <h3><span>Perguntas </span><strong>Frequentes</strong></h3>
+                            <p>
+                                Tiramos as dúvidas mais comuns sobre nosso sistema de monitoramento solar,
+                                funcionalidades e como podemos ajudar você a aproveitar o máximo da sua energia solar.
+                            </p>
+                        </div>
+
+                        <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
+
+                            <div class="faq-item faq-active">
+                                <i class="faq-icon bi bi-question-circle"></i>
+                                <h3>Como funciona o sistema de monitoramento de placas solares?</h3>
+                                <div class="faq-content">
+                                    <p>Ao firmar um contrato conosco, disponibilizamos o seu acesso personalizado, e
+                                        então, a plataforma coleta dados em tempo real diretamente do seu sistema
+                                        fotovoltaico e apresenta essas informações em um painel intuitivo. Você pode
+                                        acompanhar a produção de energia, consumo, economia gerada e identificar falhas
+                                        ou perdas de eficiência rapidamente.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div><!-- End Faq item-->
+
+                            <div class="faq-item">
+                                <i class="faq-icon bi bi-question-circle"></i>
+                                <h3>Preciso de algum equipamento específico para usar o monitoramento?</h3>
+                                <div class="faq-content">
+                                    <p>Sim, é necessário um inversor compatível com monitoramento remoto e, em alguns
+                                        casos, um datalogger. Nossa equipe técnica pode avaliar o seu sistema e indicar
+                                        o melhor equipamento, se necessário.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div><!-- End Faq item-->
+
+                            <div class="faq-item">
+                                <i class="faq-icon bi bi-question-circle"></i>
+                                <h3>Vocês oferecem suporte técnico em caso de problemas?</h3>
+                                <div class="faq-content">
+                                    <p>Sim! Oferecemos suporte técnico especializado para auxiliar com dúvidas, falhas
+                                        de comunicação e otimização do desempenho do seu sistema solar. Também
+                                        disponibilizamos alertas automáticos em caso de problemas detectados.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div><!-- End Faq item-->
+                            <div class="faq-item">
+                                <i class="faq-icon bi bi-question-circle"></i>
+                                <h3>Posso acessar os dados do meu sistema pelo celular?</h3>
+                                <div class="faq-content">
+                                    <p>Sim, nossa aplicação é responsiva e pode ser acessada de qualquer dispositivo com
+                                        internet, como smartphones, tablets e computadores. Também oferecemos um
+                                        aplicativo dedicado para facilitar ainda mais o monitoramento.</p>
+                                </div>
+                                <i class="faq-toggle bi bi-chevron-right"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-5 order-1 order-lg-2">
+                        <img src="assets/img/faq.jpg" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- /Faq Section -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section light-background">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Contato</h2>
+                <p>Quer fazer um orçamento? Quer tirar alguma dúvida? Nos contate!</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade" data-aos-delay="100">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-4">
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                            <i class="bi bi-geo-alt flex-shrink-0"></i>
+                            <div>
+                                <h3>Endereço</h3>
+                                <p>Rodovia Senador José Ermírio de Moraes, 1425 - Jardim Constantino Matucci, Sorocaba -
+                                    SP</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                            <i class="bi bi-telephone flex-shrink-0"></i>
+                            <div>
+                                <h3>Telefone</h3>
+                                <p>+55 15 99604-2744</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                            <i class="bi bi-envelope flex-shrink-0"></i>
+                            <div>
+                                <h3>E-mail</h3>
+                                <p>sunflows@gmail.com</p>
+                            </div>
+                        </div><!-- End Info Item -->
+
+                    </div>
+
+                    <div class="col-lg-8">
+                        <form action="https://formsubmit.co/sunflows2025@gmail.com" method="post" class="php-email-form"
+                            data-aos="fade-up" data-aos-delay="200">
+                            <div class="row gy-4">
+
+                                <div class="col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="Seu nome"
+                                        required="">
+                                </div>
+
+                                <div class="col-md-6 ">
+                                    <input type="email" class="form-control" name="email" placeholder="Seu e-mail"
+                                        required="">
+                                </div>
+
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" name="subject" placeholder="Assunto"
+                                        required="">
+                                </div>
+
+                                <div class="col-md-12">
+                                    <textarea class="form-control" name="message" rows="6" placeholder="Mensagem"
+                                        required=""></textarea>
+                                </div>
+                                <input type="hidden" name="_captcha" value="false">
+
+                                <div class="col-md-12 text-center">
+                                    <div class="loading">Carregando</div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                                    <button type="submit">Enviar mensagem</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div><!-- End Contact Form -->
+
+                </div>
+
+            </div>
+
+        </section><!-- /Contact Section -->
+
+    </main>
+
+    <footer id="footer" class="footer dark-background">
+        <div class="container">
+            <h3 class="sitename">Sunflow</h3>
+            <p>Soluções avançadas de monitoramento para garantir o máximo rendimento da sua energia solar.</p>
+            <div class="social-links d-flex justify-content-center">
+                <a href=""><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-skype"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
             </div>
         </div>
-    </div>
-    <div class="footer">
-        <p>Contato: </p>
-    </div>
+    </footer>
 
-    
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
